@@ -22,12 +22,12 @@
         <preference name="Fullscreen" value="true" />
     </config-file>
 
+    <js-module src="www/hidden-statusbar-overlay.js" name="HiddenStatusbarOverlay">
+        <clobbers target="plugin.statusbarOverlay" />
+    </js-module>
+
     <!-- ios -->
     <platform name="ios">
-        <js-module src="www/hidden-statusbar-overlay.js" name="HiddenStatusbarOverlay">
-            <clobbers target="plugin.statusbarOverlay" />
-        </js-module>
-
         <config-file target="config.xml" parent="/*">
             <feature name="HiddenStatusbarOverlay">
                 <param name="ios-package" value="APPHiddenStatusbarOverlay" />
