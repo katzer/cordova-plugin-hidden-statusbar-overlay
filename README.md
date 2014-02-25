@@ -1,4 +1,4 @@
-Cordova HiddenStatusBarOverlay Plugin
+Cordova HiddenStatusbarOverlay Plugin
 =======================================
 
 Cordova 3.x.x plugin to hide the statusbar and overlay on iOS.
@@ -24,12 +24,21 @@ cordova plugin rm de.appplant.cordova.plugin.hidden-statusbar-overlay
 
 
 ## Release Notes
-### Version 1.0.0 (30.01.2014)
+#### Version 1.1.0 (not yet released)
+- JS Interface to hide the overlay if needed.
+
+#### Version 1.0.0 (30.01.2014)
 - Initial release of the plugin.
 
 
 ## Using the plugin
-Simply install the plugin and nothing more. The statusbar and overlay will be hidden now.
+Simply install the plugin and nothing more. The statusbar and the overlay will be hidden now.
+
+### Hide the overlay if needed
+The overlay may appear again after some situations. In that case the overlay can be fadded out through the following JS interface:
+```javascript
+window.plugin.statusbarOverlay.hide();
+```
 
 
 ## Note for other platforms

@@ -3,9 +3,9 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="de.appplant.cordova.plugin.hidden-statusbar-overlay"
-        version="1.0.0">
+        version="1.1.0dev">
 
-    <name>HiddenStatusBarOverlay</name>
+    <name>HiddenStatusbarOverlay</name>
 
     <description>Cordova 3.x.x plugin to hide the statusbar and overlay on iOS</description>
     <repo>https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay</repo>
@@ -24,6 +24,16 @@
 
     <!-- ios -->
     <platform name="ios">
+        <js-module src="www/hidden-statusbar-overlay.js" name="HiddenStatusbarOverlay">
+            <clobbers target="plugin.statusbarOverlay" />
+        </js-module>
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="HiddenStatusbarOverlay">
+                <param name="ios-package" value="APPHiddenStatusbarOverlay" />
+            </feature>
+        </config-file>
+
         <config-file target="*-Info.plist" parent="UIStatusBarHidden">
             <true/>
         </config-file>
@@ -31,5 +41,8 @@
         <config-file target="*-Info.plist" parent="UIViewControllerBasedStatusBarAppearance">
             <false/>
         </config-file>
+
+        <header-file src="src/ios/APPHiddenStatusbarOverlay.h" />
+        <source-file src="src/ios/APPHiddenStatusbarOverlay.m" />
     </platform>
 </plugin>
