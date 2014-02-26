@@ -42,7 +42,7 @@ More informations can be found [here](https://build.phonegap.com/plugins/438).
 
 
 ## Release Notes
-#### Version 1.1.0 (not yet released)
+#### Version 1.1.0 (26.02.2014)
 - JS Interface to hide the overlay if needed.
 
 #### Version 1.0.0 (30.01.2014)
