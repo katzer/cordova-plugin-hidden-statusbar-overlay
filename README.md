@@ -29,6 +29,18 @@ cordova plugin rm de.appplant.cordova.plugin.hidden-statusbar-overlay
 ```
 
 
+## PhoneGap Build
+Add the following xml to your config.xml to always use the latest version of this plugin:
+```
+<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
+```
+or to use this exact version:
+```
+<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="0.1.0" />
+```
+More informations can be found [here](https://build.phonegap.com/plugins/438).
+
+
 ## Release Notes
 #### Version 1.1.0 (not yet released)
 - JS Interface to hide the overlay if needed.
