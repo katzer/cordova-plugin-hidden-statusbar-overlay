@@ -36,7 +36,7 @@ Add the following xml to your config.xml to always use the latest version of thi
 ```
 or to use this exact version:
 ```
-<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="0.1.0" />
+<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.0.0" />
 ```
 More informations can be found [here](https://build.phonegap.com/plugins/438).
 
