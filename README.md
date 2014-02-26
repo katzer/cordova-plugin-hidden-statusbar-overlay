@@ -12,13 +12,19 @@ by Sebastián Katzer ([github.com/katzer](https://github.com/katzer))
 
 ## Adding the Plugin to your project
 Through the [Command-line Interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface):
-```
+```bash
+# from master:
 cordova plugin add https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay
+cordova build
+
+# last version:
+cordova plugin add de.appplant.cordova.plugin.hidden-statusbar-overlay
+cordova build
 ```
 
 ## Removing the Plugin from your project
 Through the [Command-line Interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface):
-```
+```bash
 cordova plugin rm de.appplant.cordova.plugin.hidden-statusbar-overlay
 ```
 
@@ -34,7 +40,6 @@ cordova plugin rm de.appplant.cordova.plugin.hidden-statusbar-overlay
 ## Using the plugin
 Simply install the plugin and nothing more. The statusbar and the overlay will be hidden now.
 
-### Hide the overlay if needed
 The overlay may appear again after some situations. In that case the overlay can be fadded out through the following JS interface:
 ```javascript
 window.plugin.statusbarOverlay.hide();
