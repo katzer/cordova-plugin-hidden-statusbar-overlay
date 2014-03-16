@@ -39,4 +39,24 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
+/**
+ * Determines if the status bar is hidden.
+ *
+ * @param {Function} callback
+ *      A callback function to be called with the result
+ */
+- (void) isHidden:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* result = NULL;
+    UIApplication* app = [UIApplication sharedApplication];
+
+    BOOL isHidden = app.statusBarHidden;
+
+    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                       messageAsBool:isHidden];
+
+    [self.commandDelegate sendPluginResult:result
+                                callbackId:command.callbackId];
+}
+
 @end

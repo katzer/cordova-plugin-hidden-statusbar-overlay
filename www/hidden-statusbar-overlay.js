@@ -39,7 +39,7 @@ HiddenStatusbarOverlay.prototype = {
     },
 
     /**
-     * Determines if the status bar is hidden or not.
+     * Determines if the status bar is hidden.
      *
      * @param {Function} callback
      *      A callback function to be called with the result

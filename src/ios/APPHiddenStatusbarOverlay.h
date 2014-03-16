@@ -29,5 +29,7 @@
 - (void) hide:(CDVInvokedUrlCommand*)command;
 // Shows the application status bar
 - (void) show:(CDVInvokedUrlCommand*)command;
+// Determines if the status bar is hidden
+- (void) isHidden:(CDVInvokedUrlCommand*)command;
 
 @end
