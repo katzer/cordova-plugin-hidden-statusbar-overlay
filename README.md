@@ -35,7 +35,7 @@ Add the following xml to your config.xml to always use the latest version of thi
 ```
 or to use an specific version:
 ```xml
-<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.0.0" />
+<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.1.0" />
 ```
 More informations can be found [here][PGB_plugin].
 
@@ -96,5 +96,5 @@ This software is released under the [Apache 2.0 License](http://opensource.org/l
 [ios_guide]: https://developer.apple.com/library/ios/qa/qa1797/_index.html
 [CLI]: http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface
 [PGB]: http://docs.build.phonegap.com/en_US/3.3.0/index.html
-[PGB_plugin]: https://build.phonegap.com/plugins/438
+[PGB_plugin]: https://build.phonegap.com/plugins/514
 [examples]: examples
