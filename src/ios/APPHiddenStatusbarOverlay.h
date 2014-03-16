@@ -23,11 +23,11 @@
 #import <Cordova/CDVPlugin.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface APPHiddenStatusbarOverlay : CDVPlugin {
+@interface APPHiddenStatusbarOverlay : CDVPlugin
 
-}
-
-// Blendet das Overlay aus
-- (void) hide:(CDVInvokedUrlCommand *)command;
+// Hides the application status bar
+- (void) hide:(CDVInvokedUrlCommand*)command;
+// Shows the application status bar
+- (void) show:(CDVInvokedUrlCommand*)command;
 
 @end

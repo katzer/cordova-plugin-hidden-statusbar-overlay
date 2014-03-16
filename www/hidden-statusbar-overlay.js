@@ -25,12 +25,27 @@ var HiddenStatusbarOverlay = function () {
 
 HiddenStatusbarOverlay.prototype = {
     /**
-     * @public
-     *
-     * Blendet das Overlay aus.
+     * Hides the application status bar
      */
     hide: function () {
         cordova.exec(null, null, 'HiddenStatusbarOverlay', 'hide', []);
+    },
+
+    /**
+     * Shows the application status bar
+     */
+    show: function () {
+        cordova.exec(null, null, 'HiddenStatusbarOverlay', 'show', []);
+    },
+
+    /**
+     * Determines if the status bar is hidden or not.
+     *
+     * @param {Function} callback
+     *      A callback function to be called with the result
+     */
+    isHidden: function (callback) {
+        cordova.exec(callback, null, 'HiddenStatusbarOverlay', 'isHidden', []);
     }
 };
 

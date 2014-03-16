@@ -24,13 +24,19 @@
 @implementation APPHiddenStatusbarOverlay
 
 /**
- * @js-interface
- *
- * Blendet das Overlay aus.
+ * Hides the application status bar.
  */
-- (void) hide:(CDVInvokedUrlCommand *)command
+- (void) hide:(CDVInvokedUrlCommand*)command
 {
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
+/**
+ * Shows the application status bar.
+ */
+- (void) show:(CDVInvokedUrlCommand*)command
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 @end
