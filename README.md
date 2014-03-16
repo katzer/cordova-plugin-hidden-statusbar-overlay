@@ -41,18 +41,6 @@ or to use this exact version:
 More informations can be found [here](https://build.phonegap.com/plugins/438).
 
 
-## Release Notes
-#### Version 1.2.0 (not yet released)
-- JS Interface to show the overlay.
-- JS interface to determine if the status bar is hidden.
-
-#### Version 1.1.0 (26.02.2014)
-- JS Interface to hide the overlay if needed.
-
-#### Version 1.0.0 (30.01.2014)
-- Initial release of the plugin.
-
-
 ## Using the plugin
 Simply install the plugin and nothing more. The statusbar and the overlay will be hidden now.
 
