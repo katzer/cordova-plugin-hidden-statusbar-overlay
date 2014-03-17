@@ -19,13 +19,13 @@ cordova plugin add https://github.com/katzer/cordova-plugin-hidden-statusbar-ove
 or to use the last stable version:
 ```bash
 # ~~ stable version ~~
-cordova plugin add e.appplant.cordova.plugin.hidden-statusbar-overlay && cordova prepare
+cordova plugin add de.appplant.cordova.plugin.hidden-statusbar-overlay && cordova prepare
 ```
 
 ### Removing the Plugin from your project
 Through the [Command-line Interface][CLI]:
 ```bash
-cordova plugin rm e.appplant.cordova.plugin.hidden-statusbar-overlay
+cordova plugin rm de.appplant.cordova.plugin.hidden-statusbar-overlay
 ```
 
 ### PhoneGap Build
