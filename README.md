@@ -87,7 +87,7 @@ It only does not hide the overlay on iOS 7 and above.
 
 ## License
 
-This software is released under the [Apache 2.0 License](http://opensource.org/licenses/Apache-2.0).
+This software is released under the [Apache 2.0 License][apache2_license].
 
 © 2013-2014 appPlant UG, Inc. All rights reserved
 
@@ -97,4 +97,5 @@ This software is released under the [Apache 2.0 License](http://opensource.org/l
 [CLI]: http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface
 [PGB]: http://docs.build.phonegap.com/en_US/3.3.0/index.html
 [PGB_plugin]: https://build.phonegap.com/plugins/514
-[examples]: examples
+[examples]: #examples
+[apache2_license]: http://opensource.org/licenses/Apache-2.0
