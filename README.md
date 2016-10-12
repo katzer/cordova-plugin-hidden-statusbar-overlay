@@ -29,11 +29,29 @@ cordova plugin rm de.appplant.cordova.plugin.hidden-statusbar-overlay
 ```
 
 ### PhoneGap Build
+
+#### Cordova 6 syntax
+
+Add the following xml to your config.xml to always use the latest version of this plugin:
+```xml
+<plugin name="cordova-plugin-hidden-statusbar-overlay"
+	spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay" />
+```
+or to use a specific version (assuming `1.2.0` is a version tag):
+```xml
+<plugin name="cordova-plugin-hidden-statusbar-overlay"
+	spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay#1.2.0" />
+```
+
+More informations about `spec` attribute can be found [here][Cordova6_spec].
+
+#### Older Cordova syntax
+
 Add the following xml to your config.xml to always use the latest version of this plugin:
 ```xml
 <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
 ```
-or to use an specific version:
+or to use a specific version:
 ```xml
 <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.1.0" />
 ```
@@ -99,3 +117,4 @@ This software is released under the [Apache 2.0 License][apache2_license].
 [PGB_plugin]: https://build.phonegap.com/plugins/514
 [examples]: #examples
 [apache2_license]: http://opensource.org/licenses/Apache-2.0
+[Cordova6_spec]: https://cordova.apache.org/docs/en/6.x/reference/cordova-cli/index.html#plugin-spec
