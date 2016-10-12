@@ -80,8 +80,8 @@ To determine if the status bar is hidden, the `statusbarOverlay.isHidden` interf
 The method takes a callback function as its arguments which will be called with the result.
 
 ```javascript
-window.plugin.statusbarOverlay.isVisible( function (isVisible) {
-	// console.log('status bar is visible') if isVisible;
+window.plugin.statusbarOverlay.isHidden( function (isHidden) {
+	console.log('status bar is hidden? -> ', isHidden)
 });
 ```
 
