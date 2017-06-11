@@ -52,13 +52,13 @@ Statusbar and the overlay will be hidden on app start. The visibility of the sta
 To hide the status bar:
 
 ```javascript
-window.plugin.statusbarOverlay.hide();
+cordova.plugins.statusbarOverlay.hide();
 ```
 
 To show the status bar:
 
 ```javascript
-window.plugin.statusbarOverlay.show();
+cordova.plugins.statusbarOverlay.show();
 ```
 
 To determine if the status bar is hidden:
