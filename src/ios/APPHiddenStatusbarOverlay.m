@@ -1,6 +1,4 @@
 /*
- Copyright 2013-2014 appPlant UG
-
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
  distributed with this work for additional information
@@ -23,40 +21,80 @@
 
 @implementation APPHiddenStatusbarOverlay
 
+#pragma mark -
+#pragma mark Interface
+
 /**
  * Hides the application status bar.
+ *
+ * @return [ Void ]
  */
 - (void) hide:(CDVInvokedUrlCommand*)command
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [self setStatusBarHidden:YES];
 }
 
 /**
  * Shows the application status bar.
+ *
+ * @return [ Void ]
  */
 - (void) show:(CDVInvokedUrlCommand*)command
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [self setStatusBarHidden:NO];
 }
 
 /**
  * Determines if the status bar is hidden.
  *
- * @param {Function} callback
- *      A callback function to be called with the result
+ * @param [ Function ] callback A function to be called with the result.
+ *
+ * @return [ Void ]
  */
-- (void) isHidden:(CDVInvokedUrlCommand*)command
+- (void) hidden:(CDVInvokedUrlCommand*)command
 {
-    CDVPluginResult* result = NULL;
-    UIApplication* app = [UIApplication sharedApplication];
+    [self.commandDelegate runInBackground:^{
+        UIApplication* app = [UIApplication sharedApplication];
+        BOOL isHidden      = app.statusBarHidden;
 
-    BOOL isHidden = app.statusBarHidden;
+        CDVPluginResult* result;
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                           messageAsBool:isHidden];
 
-    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                                       messageAsBool:isHidden];
+        [self.commandDelegate sendPluginResult:result
+                                    callbackId:command.callbackId];
+    }];
+}
 
-    [self.commandDelegate sendPluginResult:result
-                                callbackId:command.callbackId];
+#pragma mark -
+#pragma mark Core
+
+/**
+ * Set the visibility of the status bar.
+ * The core method has been deprecated with iOS@9!
+ *
+ * @param [ BOOL ] hidden
+ *
+ * @return [ Void ]
+ */
+- (void) setStatusBarHidden:(BOOL)hidden
+{
+    if ([self.app respondsToSelector:@selector(setStatusBarHidden:)]) {
+        [self.app setStatusBarHidden:hidden];
+    } else {
+        NSLog(@"setStatusBarHidden:BOOL has been removed");
+    }
+}
+
+#pragma mark -
+#pragma mark Helper
+
+/**
+ * Short hand for shared application instance.
+ */
+- (UIApplication*) app
+{
+    return [UIApplication sharedApplication];
 }
 
 @end

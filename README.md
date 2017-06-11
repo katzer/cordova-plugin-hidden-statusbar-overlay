@@ -1,97 +1,75 @@
-Cordova HiddenStatusbarOverlay Plugin
-=======================================
 
-Beginning with iOS 7 view controllers are displayed full screen, by default, as shown in [Figure 1][ios_guide]. This means they will cover the entire screen including the area underneath the status bar.
+<p align="left"><b><a href="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay/tree/example">SAMPLE APP</a> :point_right:</b></p>
 
-### Plugin's Purpose
-The purpose of the [Cordova][cordova] plugin is to prevent the status bar from covering the view controller in iOS 7.
+# HiddenStatusbarOverlay Plugin
+
+Beginning with iOS 7 view controllers are displayed full screen, by default, as shown [here][ios_guide]. This means they will cover the entire screen including the area underneath the status bar.
+
+This plugin prevents the status bar from covering the view controller for iOS@7 devices and up.
+
+## Supported Platforms
+
+- __iOS__
 
 
-# Installation
-The plugin can either be installed into the local development environment or cloud based through [PhoneGap Build][PGB].
+## Installation
 
-### Adding the Plugin to your project
-Through the [Command-line Interface][CLI]:
-```bash
-# ~~ from master ~~
-cordova plugin add https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay && cordova prepare
-```
-or to use the last stable version:
-```bash
-# ~~ stable version ~~
-cordova plugin add de.appplant.cordova.plugin.hidden-statusbar-overlay && cordova prepare
-```
+The plugin can be installed via [CLI][CLI] and is publicly available on [NPM][npm].
 
-### Removing the Plugin from your project
-Through the [Command-line Interface][CLI]:
-```bash
-cordova plugin rm de.appplant.cordova.plugin.hidden-statusbar-overlay
-```
+Execute from the projects root folder:
 
-### PhoneGap Build
+    $ cordova plugin add cordova-plugin-hidden-statusbar-overlay
 
-#### Cordova 6 syntax
+Or install a specific version:
 
-Add the following xml to your config.xml to always use the latest version of this plugin:
+    $ cordova plugin add cordova-plugin-hidden-statusbar-overlay@VERSION
+
+Or install the latest head version:
+
+    $ cordova plugin add https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay.git
+
+Or install from local source:
+
+    $ cordova plugin add cordova-plugin-hidden-statusbar-overlay --searchpath <path>
+
+Or add the following line to the `config.xml` for Phonegap Build projects:
+
 ```xml
-<plugin name="cordova-plugin-hidden-statusbar-overlay"
-	spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay" />
-```
-or to use a specific version (assuming `1.2.0` is a version tag):
-```xml
-<plugin name="cordova-plugin-hidden-statusbar-overlay"
-	spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay#1.2.0" />
+<plugin name="cordova-plugin-hidden-statusbar-overlay" spec="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay" />
 ```
 
-More informations about `spec` attribute can be found [here][Cordova6_spec].
 
-#### Older Cordova syntax
+## Usage
 
-Add the following xml to your config.xml to always use the latest version of this plugin:
-```xml
-<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
+The plugin creates the object `cordova.plugins.statusbarOverlay` and is accessible after the *deviceready* event has been fired.
+
+```js
+document.addEventListener('deviceready', function () {
+    // cordova.plugins.statusbarOverlay is now available
+}, false);
 ```
-or to use a specific version:
-```xml
-<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.1.0" />
-```
-More informations can be found [here][PGB_plugin].
 
+Statusbar and the overlay will be hidden on app start. The visibility of the status bar can be changed manually.
 
-## Using the plugin
-After installation, the statusbar and the overlay will be hidden now. The visibility of the status bar can be changed manually too.
-
-### Hide the status bar
-The overlay may appear again after some situations. In that case the overlay can be fadded out through the `statusbarOverlay.hide` interface.
+To hide the status bar:
 
 ```javascript
 window.plugin.statusbarOverlay.hide();
 ```
 
-### Show the status bar
-To revert the changes, the status bar can become visible again through the `statusbarOverlay.show` interface.
+To show the status bar:
 
 ```javascript
 window.plugin.statusbarOverlay.show();
 ```
 
-### Determine the status bar visibility
-To determine if the status bar is hidden, the `statusbarOverlay.isHidden` interface can be used.<br>
-The method takes a callback function as its arguments which will be called with the result.
+To determine if the status bar is hidden:
 
 ```javascript
-window.plugin.statusbarOverlay.isHidden( function (isHidden) {
-	console.log('status bar is hidden? -> ', isHidden)
+cordova.plugins.statusbarOverlay.isHidden(function (isHidden) {
+    console.log('status bar is hidden? -> ', isHidden)
 });
 ```
-
-
-## Note for other platforms
-Cordova has the ability to hide and show the statusbar for each platform. Simply add the following snippet to the plugin.xml:
-```xml
-<preference name="Fullscreen" value="true" />
-```
-It only does not hide the overlay on iOS 7 and above.
 
 
 ## Contributing
@@ -107,14 +85,14 @@ It only does not hide the overlay on iOS 7 and above.
 
 This software is released under the [Apache 2.0 License][apache2_license].
 
-© 2013-2014 appPlant UG, Inc. All rights reserved
+Made with :yum: from Leipzig
+
+© 2013 [appPlant GmbH][appplant]
 
 
 [cordova]: https://cordova.apache.org
 [ios_guide]: https://developer.apple.com/library/ios/qa/qa1797/_index.html
-[CLI]: http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface
-[PGB]: http://docs.build.phonegap.com/en_US/3.3.0/index.html
-[PGB_plugin]: https://build.phonegap.com/plugins/514
-[examples]: #examples
+[CLI]: http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface
+[npm]: https://www.npmjs.com/package/cordova-plugin-hidden-statusbar-overlay
 [apache2_license]: http://opensource.org/licenses/Apache-2.0
-[Cordova6_spec]: https://cordova.apache.org/docs/en/6.x/reference/cordova-cli/index.html#plugin-spec
+[appplant]: http://appplant.de

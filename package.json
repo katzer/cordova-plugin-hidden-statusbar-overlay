@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-hidden-statusbar-overlay",
+  "version": "2.0.0",
+  "description": "Hides the statusbar and overlay",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay.git"
+  },
+  "keywords": [
+      "appplant",
+      "statusbar",
+      "overlay",
+      "cordova",
+      "ecosystem:cordova"
+  ],
+  "platforms": [
+      "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6"
+    },
+    {
+      "name": "apple-ios",
+      "version": ">=7"
+    }
+  ],
+  "author": "Sebastián Katzer",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay/issues"
+  },
+  "homepage": "https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay#readme"
+}

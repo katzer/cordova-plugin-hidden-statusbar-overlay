@@ -1,6 +1,4 @@
 /*
- Copyright 2013-2014 appPlant UG
-
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
  distributed with this work for additional information
@@ -19,9 +17,7 @@
  under the License.
  */
 
-#import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
-#import <CoreLocation/CoreLocation.h>
 
 @interface APPHiddenStatusbarOverlay : CDVPlugin
 
@@ -30,6 +26,6 @@
 // Shows the application status bar
 - (void) show:(CDVInvokedUrlCommand*)command;
 // Determines if the status bar is hidden
-- (void) isHidden:(CDVInvokedUrlCommand*)command;
+- (void) hidden:(CDVInvokedUrlCommand*)command;
 
 @end
