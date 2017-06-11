@@ -5,8 +5,6 @@
 
 Beginning with iOS 7 view controllers are displayed full screen, by default, as shown [here][ios_guide]. This means they will cover the entire screen including the area underneath the status bar.
 
-This plugin prevents the status bar from covering the view controller for iOS@7 devices and up.
-
 ## Supported Platforms
 
 - __iOS__

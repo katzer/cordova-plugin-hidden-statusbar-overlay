@@ -1,6 +1,6 @@
 ## Change Log
 
-### Version 2.0.0 (not yet released)
+### Version 2.0.0 (11.06.2017)
 - New plugin id `cordova-plugin-hidden-statusbar-overlay`
 - Sample app using latest cordova.
 - Updated plugin to work with latest cordova.
