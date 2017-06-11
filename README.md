@@ -1,7 +1,7 @@
 
 <p align="left"><b><a href="https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay/tree/example">SAMPLE APP</a> :point_right:</b></p>
 
-# HiddenStatusbarOverlay Plugin
+# HiddenStatusbarOverlay Plugin [![npm version](https://badge.fury.io/js/cordova-plugin-hidden-statusbar-overlay.svg)](http://badge.fury.io/js/cordova-plugin-hidden-statusbar-overlay) 
 
 Beginning with iOS 7 view controllers are displayed full screen, by default, as shown [here][ios_guide]. This means they will cover the entire screen including the area underneath the status bar.
 
