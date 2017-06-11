@@ -1,0 +1,10 @@
+{
+    "cordova-plugin-hidden-statusbar-overlay": {
+        "source": {
+            "type": "local",
+            "path": "/Users/sebastian/Documents/github/cordova-plugin-hidden-statusbar-overlay"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B5B7BAEFBF2C995EB6F6EC3C47998CEBED3C3614",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B5B7BAEFBF2C995EB6F6EC3C47998CEBED3C3614" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5FFD516F-8C43-4367-852E-EC8FC40D16C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B5B7BAEFBF2C995EB6F6EC3C47998CEBED3C3614" : "cordova-plugin-hidden-statusbar-overlay\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HiddenStatusbar Plugin",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "platforms\/ios\/HiddenStatusbar Plugin.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:katzer\/cordova-plugin-hidden-statusbar-overlay.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B5B7BAEFBF2C995EB6F6EC3C47998CEBED3C3614"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:katzer\/cordova-plugin-hidden-statusbar-overlay.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B5B7BAEFBF2C995EB6F6EC3C47998CEBED3C3614"
+    }
+  ]
+}

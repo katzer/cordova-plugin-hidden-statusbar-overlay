@@ -1,0 +1,24 @@
+{
+    "name": "de.appplant.cordova.example.hiddenstatusbar",
+    "displayName": "HiddenStatusbar Plugin",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-hidden-statusbar-overlay": "~2.0.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-hidden-statusbar-overlay": {}
+        },
+        "platforms": [
+            "ios"
+        ]
+    }
+}
